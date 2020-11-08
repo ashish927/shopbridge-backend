@@ -5,6 +5,8 @@ import com.thinkbridge.shopbridge.model.Item
 import com.thinkbridge.shopbridge.service.ItemService
 import spock.lang.Specification
 
+import static com.thinkbridge.shopbridge.stub.ItemStub.getIem
+
 class ItemResourceSpec extends Specification {
 
     private ItemResource itemResource
@@ -77,11 +79,5 @@ class ItemResourceSpec extends Specification {
 
     }
 
-    private static Item getIem() {
-        Item item = new Item()
-        item.name = "I-1"
-        item.description = "Mens shirt"
-        item.price = 200.90
-        return item
-    }
+
 }
