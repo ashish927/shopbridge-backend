@@ -31,3 +31,6 @@ src/test/resources/POSTMAN/shopbridge.postman_collection.json
 
 ## Database Console
 http://localhost:8080/shopbridge/h2-console
+
+## Code Coverage
+Use IDE plugin and Run project with code coverage
