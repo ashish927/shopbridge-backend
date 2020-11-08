@@ -68,7 +68,7 @@ public class ItemResource {
     }
     )
     @DeleteMapping("{id}")
-    public void delete(@PathVariable("id") Long itemId) {
-        itemService.delete(itemId);
+    public void deleteById(@PathVariable("id") Long itemId) {
+        itemService.deleteById(itemId);
     }
 }

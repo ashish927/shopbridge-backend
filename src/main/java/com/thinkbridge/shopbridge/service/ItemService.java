@@ -33,7 +33,7 @@ public class ItemService {
         return itemRepository.save(item);
     }
 
-    public void delete(Long itemId) {
+    public void deleteById(Long itemId) {
         itemRepository.deleteById(itemId);
     }
 }
