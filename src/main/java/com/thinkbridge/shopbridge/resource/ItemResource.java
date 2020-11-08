@@ -4,10 +4,9 @@ import com.thinkbridge.shopbridge.model.Item;
 import com.thinkbridge.shopbridge.service.ItemService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/item")
@@ -22,5 +21,10 @@ public class ItemResource {
     @PostMapping
     public ResponseEntity<Item> create(@RequestBody Item item) {
         return new ResponseEntity<>(itemService.create(item), HttpStatus.CREATED);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Item>> get(){
+        return new ResponseEntity<>(itemService.get(), HttpStatus.OK);
     }
 }
