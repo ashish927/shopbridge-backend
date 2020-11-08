@@ -24,7 +24,7 @@ public class ItemService {
         return itemRepository.findAll();
     }
 
-    public Item getById(String itemId) {
+    public Item getById(Long itemId) {
         return itemRepository.findById(itemId)
                 .orElseThrow(()->new NoSuchElementException("No item found for Id:"+itemId));
     }

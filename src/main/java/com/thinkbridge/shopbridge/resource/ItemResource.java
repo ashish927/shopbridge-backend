@@ -29,7 +29,7 @@ public class ItemResource {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Item> getById(@PathVariable("id") String itemId){
+    public ResponseEntity<Item> getById(@PathVariable("id") Long itemId){
         return new ResponseEntity<>(itemService.getById(itemId), HttpStatus.OK);
     }
 }
