@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "5e1a4328-d02f-4575-896f-764c7194d433",
+		"name": "shopbridge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/shopbridge/item/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/shopbridge/item/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shopbridge",
+						"item",
+						"1"
+					]
+				},
+				"description": "Get item by id"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/shopbridge/item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"I-1\",\n    \"price\": 200.20,\n    \"description\": \"new product\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/shopbridge/item",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shopbridge",
+						"item"
+					]
+				},
+				"description": "Create item"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/shopbridge/item",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/shopbridge/item",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shopbridge",
+						"item"
+					]
+				},
+				"description": "Get all items"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/shopbridge/item",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"1\",\n    \"name\":\"P-1\",\n    \"price\": 200.20,\n    \"description\": \"new product\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/shopbridge/item",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shopbridge",
+						"item"
+					]
+				},
+				"description": "update item"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/shopbridge/item/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/shopbridge/item/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shopbridge",
+						"item",
+						"1"
+					]
+				},
+				"description": "Delete item"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
