@@ -1,5 +1,7 @@
 package com.thinkbridge.shopbridge.model;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,9 +11,13 @@ import javax.persistence.Id;
 public class Item {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
+    @ApiModelProperty(notes = "The database generated item ID")
     private Long id;
+    @ApiModelProperty(notes = "Name of item")
     private String name;
+    @ApiModelProperty(notes = "Price of item")
     private Double price;
+    @ApiModelProperty(notes = "Description of item" , required = true)
     private String description;
 
     public Long getId() {
