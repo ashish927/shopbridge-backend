@@ -28,4 +28,12 @@ public class ItemService {
         return itemRepository.findById(itemId)
                 .orElseThrow(()->new NoSuchElementException("No item found for Id:"+itemId));
     }
+
+    public Item update(Item item) {
+        return itemRepository.save(item);
+    }
+
+    public void delete(Long itemId) {
+        itemRepository.deleteById(itemId);
+    }
 }

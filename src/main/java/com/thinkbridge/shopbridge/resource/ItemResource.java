@@ -24,12 +24,22 @@ public class ItemResource {
     }
 
     @GetMapping
-    public ResponseEntity<List<Item>> get(){
+    public ResponseEntity<List<Item>> get() {
         return new ResponseEntity<>(itemService.get(), HttpStatus.OK);
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Item> getById(@PathVariable("id") Long itemId){
+    public ResponseEntity<Item> getById(@PathVariable("id") Long itemId) {
         return new ResponseEntity<>(itemService.getById(itemId), HttpStatus.OK);
+    }
+
+    @PutMapping
+    public ResponseEntity<Item> update(@RequestBody Item item) {
+        return new ResponseEntity<>(itemService.update(item), HttpStatus.OK);
+    }
+
+    @DeleteMapping("{id}")
+    public void delete(@PathVariable("id") Long itemId) {
+        itemService.delete(itemId);
     }
 }
