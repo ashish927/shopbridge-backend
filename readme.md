@@ -28,3 +28,6 @@ http://localhost:8080/shopbridge/swagger-ui.html
 
 ## Postman collection
 src/test/resources/POSTMAN/shopbridge.postman_collection.json
+
+## Database Console
+http://localhost:8080/shopbridge/h2-console
