@@ -5,6 +5,7 @@ import com.thinkbridge.shopbridge.repository.ItemRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 public class ItemService {
@@ -21,5 +22,10 @@ public class ItemService {
 
     public List<Item> get() {
         return itemRepository.findAll();
+    }
+
+    public Item getById(String itemId) {
+        return itemRepository.findById(itemId)
+                .orElseThrow(()->new NoSuchElementException("No item found for Id:"+itemId));
     }
 }

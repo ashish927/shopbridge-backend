@@ -27,4 +27,9 @@ public class ItemResource {
     public ResponseEntity<List<Item>> get(){
         return new ResponseEntity<>(itemService.get(), HttpStatus.OK);
     }
+
+    @GetMapping("{id}")
+    public ResponseEntity<Item> getById(@PathVariable("id") String itemId){
+        return new ResponseEntity<>(itemService.getById(itemId), HttpStatus.OK);
+    }
 }
